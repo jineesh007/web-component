@@ -1,0 +1,19 @@
+/* To learn more about this file see: https://angular.io/config/tsconfig. */
+{
+  // "extends": "./tsconfig.lib.json",
+  "compilerOptions": {
+    "declarationMap": false,
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [ "es2017", "dom" ],
+    "allowJs": true,
+    "types": [ "node", "jasmine", "hammerjs", "webpack-env" ]
+  },
+  "angularCompilerOptions": {
+    "compilationMode": "full"
+  }
+}

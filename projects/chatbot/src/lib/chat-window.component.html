@@ -1,0 +1,36 @@
+<div id="body">
+  <div id="chat-circle" (click)="toggleWindow()" class="btn btn-raised">
+    <div id="chat-overlay"></div>
+    <i class="material-icons">speaker_phone</i>
+  </div>
+  <div *ngIf="isWindowOpen" class="chat-box">
+    <div class="chat-box-header">
+      ChatBot
+      <span (click)="toggleWindow()" class="chat-box-toggle"><i class="material-icons">close</i></span>
+    </div>
+    <!-- <div class="chat-box-body"> -->
+    <!-- <div class="chat-box-overlay">
+      </div> -->
+    <div class="chat-logs">
+      <div class="message-container" [class.msg-right]="msg.messageOwner=='user'"
+        [class.msg-left]="msg.messageOwner=='bot'" *ngFor="let msg of messages">
+        <div [class.user-log]="msg.messageOwner=='user'" [class.bot-log]="msg.messageOwner=='bot'">
+          <span>{{msg.message}}</span>
+        </div>
+      </div>
+    </div><!--chat-log -->
+    <!-- </div> -->
+    <div class="chat-input">
+      <form>
+        <div class="chat-input-row">
+          <input type="text" #chatInput id="chat-input" placeholder="Send a message..." />
+          <div class="send-btn-container">
+            <button (click)="sendQuery(chatInput.value)" type="submit" class="chat-submit" id="chat-submit"><i
+                class="material-icons">send</i></button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<!-- <router-outlet></router-outlet> -->
